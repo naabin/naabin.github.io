@@ -1,0 +1,22 @@
+{   "ds": 
+    [
+        {
+            "name": "Stack",
+            "tag": "stack",
+            "description": "Stack is one of the simple data structure with minimal operation available"
+        },
+        {
+            "name": "Queue",
+            "tag": "queue",
+            "description": "Queue is also one of the fundamental data type."
+        }
+    ],
+    "algs":
+        [
+            {
+                "name": "Union find",
+                "description": "Union find algorithm",
+                "application": "Percolation"
+            }
+        ]
+}

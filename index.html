@@ -1,16 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+        integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Algorithms and Data Structures</title>
+    <style>
+        body {
+            height: 100vh;
+            overflow: hidden;
+        }
+        .ui.vertical.menu {
+            width: 20rem;
+        }
+    </style>
 </head>
+
 <body>
-    <div>
-        <object style="width: 100%; height: 95vh;" data="./MergeSort.html"></object>
+    <div class="ui grid">
+        <div class="four wide column" style="margin-top: 50px; left: 50px">
+            <div class="ui vertical menu">
+                <a class="item">
+                    Home
+                </a>
+                <div class="ui left pointing dropdown link item">
+                    <i class="dropdown icon"></i>
+                    Algorithms
+                    <div class="menu">
+                        <a href="#merge-sort" onclick="x('./MergeSort.html')" class="item">Merge Sort</a>
+                    </div>
+                </div>
+                <div class="ui left pointing dropdown link item">
+                    <i class="dropdown icon"></i>
+                    Data Structures
+                    <div class="menu">
+                        <a href="#union-find" onclick="x('./Union-Find.html')" class="item">Union Find</a>
+                    </div>
+                </div>
+                <div class="ui left pointing dropdown link item">
+                    <i class="dropdown icon"></i>
+                    Problem sets
+                </div>
+                <a class="item">
+                    About
+                </a>
+            </div>
+        </div>
+        <div class="twelve wide column">
+            <object id="md-file" style="width: 100%; height: 100vh;"></object>
+        </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous">
+        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"
+        integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
+    <script>
+        $('.ui.dropdown').dropdown();
+        function x(fileName) {
+            const el = document.getElementById("md-file");
+            el.setAttribute("data", fileName);
+        }
+    </script>
 </body>
+
 </html>

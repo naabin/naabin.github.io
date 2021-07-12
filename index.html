@@ -17,10 +17,17 @@
         .ui.vertical.menu {
             width: 20rem;
         }
+        .ui.red.segment {
+            margin: 0;
+            background: beige;
+            text-align: center;
+            font-style: italic;
+        }
     </style>
 </head>
 
 <body>
+    <div class="ui red segment">The site is under development</div>
     <div class="ui grid">
         <div class="four wide column" style="margin-top: 50px; left: 50px">
             <div class="ui vertical menu">
@@ -46,6 +53,13 @@
                 <div class="ui left pointing dropdown link item">
                     <i class="dropdown icon"></i>
                     Problem sets
+                    <div class="menu">
+                        <a class="item" href="#percolation" onclick="x('./Percolation.html')">Percolation System</a>
+                    </div>
+                </div>
+                <div class="ui left pointing dropdown link item">
+                    <i class="dropdown icon"></i>
+                    General Programming
                 </div>
                 <a class="item">
                     About
